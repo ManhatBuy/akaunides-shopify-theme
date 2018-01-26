@@ -363,7 +363,7 @@ $color-pinterest: #cb2027;
 $width-site: 1200px;
 $gutter-site: 55px;
 $gutter-site-mobile: 22px;
-$section-spacing: 55px;
+$section-spacing: 0px;
 $section-spacing-small: 35px;
 $border-radius: 2px;
 
@@ -1206,7 +1206,7 @@ html {
 .page-width {
   @include clearfix();
   max-width: $width-site;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .main-content {
@@ -2238,8 +2238,10 @@ $dropdown-padding: 11px 17px;
 .site-nav {
   position: relative;
   padding: 0;
-  text-align: center;
-  margin: 25px 0;
+  text-align: left;
+  margin: 25px auto;
+  max-width:1200px;
+  padding-left:15px;
 
   a {
     padding: 3px 10px;
@@ -3640,6 +3642,7 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
   position: relative;
   padding: 0 $gutter-site;
 
+
   @include media-query($small) {
     border-bottom: 1px solid $color-border;
     padding: 0;
@@ -3674,7 +3677,10 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 }
 
 .site-header__logo {
-  margin: 15px 0;
+  margin: 15px auto;
+  margin-bottom:0px;
+  max-width:1200px;
+  padding-left:100px;
 
   .logo-align--center & {
     text-align: center;
@@ -3730,7 +3736,8 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 
 .site-header__icons-wrapper {
   position: relative;
-  margin-right: -10px;
+  
+  float:right;
 }
 
 .site-header__cart,
@@ -5818,3 +5825,179 @@ $toolbar-height-small: 46px;
   font-size: em(floor($font-size-base * 0.88));
 }
 
+
+/*================ Custom AKA Undies css================*/
+
+.header_top_section,
+.header_midsection,
+.header_bottomsection
+{
+  max-width:1200px;
+  width:100%;
+  margin:auto;
+}
+
+#shopify-section-header
+{
+  float:left;
+  width:100%;
+  background-color:white;
+}
+.page-container
+{
+  float:left;
+  width:100%;
+}
+
+.site-header__icons
+{
+  float:right;
+}
+
+.announcement-bar
+{
+  float:left;
+}
+
+.announcement-bar__message
+{
+  padding-left:55px;
+}
+
+.nav-left
+{
+  padding-left:0px;  
+  float:left;
+  width:10%;
+}
+
+.page-content-center
+{
+  float:left;
+  margin-top:25px;
+}
+
+.page-hero-text-left
+{
+  padding-left:100px;
+}
+
+.site-header__logo
+{
+  padding-left:25px;
+}
+
+.site-header__logo,
+.site-header__logo-link,
+.announcement-bar__message
+{
+  
+  @include media-query($small) {
+    padding-left:10px;
+  }
+}
+
+.site-header
+{
+  @include media-query($small) {
+     height:140px;
+  }
+  
+  @include media-query($large) {
+     height:100px;
+  }
+  
+  @include media-query($widescreen) {
+     height:100px;
+  }
+   
+}
+
+#shopify-section-featured-collections
+{
+    @include media-query($widescreen) {
+     margin-top:30px;
+     
+   }
+  
+   @include media-query($large) {
+       margin-top:30px;
+     
+   }
+}
+
+#shopify-section-featured-collections,
+.header_top_section .grid__item
+{
+  @include media-query($small) {
+    padding-left:10px;
+  }
+  
+ 
+}
+
+.mobile-nav-wrapper
+{
+  
+}
+
+#shopify-section-footer
+{
+  margin-top:50px;
+  margin-bottom:50px;
+}
+
+.product-membership
+{
+  max-width:1200px;
+  margin:auto;
+  padding:100px;
+   @include media-query($small) {
+    padding-left:20px;
+    padding-right:20px;
+  }
+  
+   @include media-query($widescreen) {
+     padding:0px;
+     
+   }
+  
+   @include media-query($large) {
+      padding:0px;
+     
+   }
+  
+    
+}
+
+.product-membership-single__description
+{
+  color:white;
+}
+
+.product-form-product-membership-template,
+.product-membership-single__description
+{
+   @include media-query($widescreen) {
+     width:30%;
+   
+     
+   }
+  
+   @include media-query($large) {
+      width:30%;
+     
+   }
+}
+
+.site-header__logo
+{
+  @include media-query($small) {
+   margin-top:0px;
+  }
+}
+
+#ProductPrice-product-membership-template
+{
+  color:white !important;
+}

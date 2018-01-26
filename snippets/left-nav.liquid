@@ -1,0 +1,8 @@
+<ul class="site-nav list--inline {{ nav_alignment }}" id="SiteNav">
+
+{% for link in linklists['main-menu'].links %}	 
+  	  <li {% if link.active %}class="site-nav--active"{% endif %}>
+        <a href="{{ link.url }}" class="site-nav__link site-nav__link--main">{{ link.title }}</a>
+      </li>
+{% endfor %}
+</ul>
